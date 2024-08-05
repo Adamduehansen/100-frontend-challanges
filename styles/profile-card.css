@@ -1,0 +1,30 @@
+.profile-card {
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75);
+  text-align: center;
+  border-radius: 40px;
+  overflow: hidden;
+  
+  .profile-card__img {
+    background-clip: border-box;
+    background: linear-gradient(to right, blue, red);
+    padding: 30px 0;
+    
+    img {
+      width: 150px;
+
+    }
+  }
+  
+  .profile-card__icons {
+    margin: 0 auto;
+    width: fit-content;
+
+    & > div {
+      display: flex;
+      gap: 0 10px;
+    }
+  }
+
+}
