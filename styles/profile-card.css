@@ -1,4 +1,6 @@
 .profile-card {
+  --animation-speed: 500ms;
+  
   -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75);
@@ -24,7 +26,50 @@
     & > div {
       display: flex;
       gap: 0 10px;
+
+      & a {
+        svg * {
+          color: orchid;
+          transition: color var(--animation-speed) ease-out;
+          fill: currentColor;
+        }
+        
+        &:hover svg * {
+          transition: color var(--animation-speed) ease-out;
+          color: red;
+        }
+      }
     }
   }
 
+  .profile-card__content {
+    padding: 30px;
+    display: grid;
+    gap: 10px 0
+  }
+
+  .profile-card__buttons {
+    height: 50px;
+    display: flex;
+    
+    & button, & a {
+      width: 100%;
+      background: orchid;
+      color: white;
+      transition: background var(--animation-speed) ease-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      @media screen AND (min-width: 1024px) {
+        cursor: pointer;
+        transition: background var(--animation-speed) ease-out;
+
+        &:hover {
+          background: gray;
+        }
+      }
+    }
+
+  }
 }
